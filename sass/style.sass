@@ -1,4 +1,5 @@
 @use 'variables'
+@use 'mixins'
 
 *
     font-family: 'Josefin Sans', sans-serif
@@ -19,3 +20,51 @@ body
 .header
     display: flex
     justify-content: space-between
+    @include mixins.container
+    &-brand
+        color: variables.$primary-color
+        font-size: 3rem
+
+    &-navbar
+        ul
+            height: 100%
+            @include mixins.flex-center
+            li
+                margin: 0 1rem
+                text-transform: uppercase
+                font-size: .8rem
+
+                .active
+                    color: variables.$secondary-color
+
+                a
+                    &:hover
+                        color: variables.$secondary-color
+
+    &-social-media
+        ul
+            @include mixins.flex-center
+            height: 100%
+
+            li
+                margin: 0 1rem
+
+                a
+                    &:hover
+                        color: variables.$primary-color
+
+.gallery
+    @include mixins.container
+    @include mixins.flex-center
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0
+
+    &-card
+        width: 31%
+        height: 400px
+        margin-bottom: 4%
+        &-title
+            font-size: 2rem
+            font-weight: 300
+            margin-bottom: 1rem
