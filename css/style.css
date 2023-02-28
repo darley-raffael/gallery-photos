@@ -25,6 +25,11 @@ body ul {
   padding: 1.5rem 0;
   margin: 0 auto;
 }
+@media (max-width: 425px) {
+  .header {
+    padding: 1.1rem;
+  }
+}
 .header-brand {
   color: #fff;
   font-size: 3rem;
@@ -34,6 +39,11 @@ body ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 425px) {
+  .header-navbar ul {
+    display: none;
+  }
 }
 .header-navbar ul li {
   margin: 0 1rem;
@@ -51,6 +61,11 @@ body ul {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+@media (max-width: 425px) {
+  .header-social-media ul {
+    display: none;
+  }
 }
 .header-social-media ul li {
   margin: 0 1rem;
@@ -70,10 +85,26 @@ body ul {
   justify-content: space-between;
   padding: 0;
 }
+@media (max-width: 425px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
 .gallery-card {
   width: 31%;
   height: 400px;
   margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+@media (max-width: 425px) {
+  .gallery-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
 }
 .gallery-card-title {
   font-size: 2rem;
@@ -92,6 +123,19 @@ body ul {
   color: #000;
 }
 .gallery #card-1 {
+  background-image: url("../img/animais-unsplash.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-1:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/animais-unsplash.jpg");
+}
+.gallery #card-2 {
   background-image: url("../img/arquitetura-unsplash.jpg");
   background-size: 100%;
   background-position: center;
@@ -99,7 +143,12 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.gallery #card-2 {
+.gallery #card-2:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/arquitetura-unsplash.jpg");
+}
+.gallery #card-3 {
   background-image: url("../img/cidade-unsplash.jpg");
   background-size: 100%;
   background-position: center;
@@ -107,7 +156,12 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.gallery #card-3 {
+.gallery #card-3:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cidade-unsplash.jpg");
+}
+.gallery #card-4 {
   background-image: url("../img/decoracao-unsplash.jpg");
   background-size: 100%;
   background-position: center;
@@ -115,7 +169,12 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.gallery #card-4 {
+.gallery #card-4:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/decoracao-unsplash.jpg");
+}
+.gallery #card-5 {
   background-image: url("../img/esporte-unsplash.jpg");
   background-size: 100%;
   background-position: center;
@@ -123,7 +182,12 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.gallery #card-5 {
+.gallery #card-5:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/esporte-unsplash.jpg");
+}
+.gallery #card-6 {
   background-image: url("../img/natureza-unsplash.jpg");
   background-size: 100%;
   background-position: center;
@@ -131,13 +195,10 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.gallery #card-6 {
-  background-image: url("../img/animais-unsplash.jpg");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-  transition: 0.6s;
+.gallery #card-6:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/natureza-unsplash.jpg");
 }
 .gallery #card-7 {
   background-image: url("../img/paisagem-unsplash.jpg");
@@ -147,6 +208,11 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
+.gallery #card-7:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/paisagem-unsplash.jpg");
+}
 .gallery #card-8 {
   background-image: url("../img/pessoas-unsplash.jpg");
   background-size: 100%;
@@ -155,6 +221,11 @@ body ul {
   filter: grayscale(100%);
   transition: 0.6s;
 }
+.gallery #card-8:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/pessoas-unsplash.jpg");
+}
 .gallery #card-9 {
   background-image: url("../img/refeicao-unsplash.jpg");
   background-size: 100%;
@@ -162,6 +233,20 @@ body ul {
   background-repeat: no-repeat;
   filter: grayscale(100%);
   transition: 0.6s;
+}
+.gallery #card-9:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/refeicao-unsplash.jpg");
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+footer span {
+  font-weight: bold;
+  color: #20c997;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -21,6 +21,9 @@ body
     display: flex
     justify-content: space-between
     @include mixins.container
+    @include mixins.mobile
+        padding: 1.1rem
+
     &-brand
         color: variables.$primary-color
         font-size: 3rem
@@ -29,6 +32,9 @@ body
         ul
             height: 100%
             @include mixins.flex-center
+            @include mixins.mobile
+                display: none
+
             li
                 margin: 0 1rem
                 text-transform: uppercase
@@ -45,6 +51,9 @@ body
         ul
             @include mixins.flex-center
             height: 100%
+            @include mixins.mobile
+                display: none
+
 
             li
                 margin: 0 1rem
@@ -56,6 +65,8 @@ body
 .gallery
     @include mixins.container
     @include mixins.flex-center
+    @include mixins.mobile
+        flex-direction: column
     flex-wrap: wrap
     justify-content: space-between
     padding: 0
@@ -64,6 +75,14 @@ body
         width: 31%
         height: 400px
         margin-bottom: 4%
+        @include mixins.flex-center
+        @include mixins.mobile 
+            width: 90%
+            margin-bottom: 6%
+
+        flex-direction: column
+        color: variables.$primary-color 
+
         &-title
             font-size: 2rem
             font-weight: 300
@@ -77,19 +96,20 @@ body
             &:hover
                 background-color: variables.$primary-color 
                 color: variables.$bg-color
+        
     
     #card-1
-        @include mixins.bg-img(arquitetura)
-    #card-2
-        @include mixins.bg-img(cidade)
-    #card-3
-        @include mixins.bg-img(decoracao)
-    #card-4
-        @include mixins.bg-img(esporte)
-    #card-5
-        @include mixins.bg-img(natureza)
-    #card-6
         @include mixins.bg-img(animais)
+    #card-2
+        @include mixins.bg-img(arquitetura)
+    #card-3
+        @include mixins.bg-img(cidade)
+    #card-4
+        @include mixins.bg-img(decoracao)
+    #card-5
+        @include mixins.bg-img(esporte)
+    #card-6
+        @include mixins.bg-img(natureza)
     #card-7
         @include mixins.bg-img(paisagem)
     #card-8
@@ -97,4 +117,11 @@ body
     #card-9
         @include mixins.bg-img(refeicao)
   
-    
+footer
+    text-align: center
+    padding-bottom: 2rem
+
+    span
+        font-weight: bold
+        color: variables.$secondary-color 
+
