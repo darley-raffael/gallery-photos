@@ -5,7 +5,16 @@
     padding: 1.5rem 0
     margin: 0 auto
 
-@mixin flex-center()
+@mixin flex-center  
     display: flex
     align-items: center
     justify-content: center
+
+@mixin bg-img($img)
+    background-image: url("../img/#{$img}-unsplash.jpg")
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+    filter: grayscale(100%)
+    transition: .6s
+    
